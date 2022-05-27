@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Quiz Grading on Client Side</title>
+</head>
+<body>
+
+<script language="javascript">
+    function logQuizSubmission(isbn,url,quizType) {
+          document.forms["logQuizSubmission"].elements["quizType"].value=quizType;
+          document.forms["logQuizSubmission"].elements["isbn"].value=isbn;
+          document.forms["logQuizSubmission"].elements["url"].value=url;
+          document.forms["logQuizSubmission"].submit();
+    }
+</script>
+ <form name="logQuizSubmission" action="http://glencoe.mheducation.com/novella/logQuizSubmissionServlet" method="post">
+        <input type="hidden" name="quizType" value=""/>
+        <input type="hidden" name="url" value=""/>
+        <input type="hidden" name="isbn" value=""/>
+
+</form>
+</body>
+</html>
